@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  background-image: url("images/pattern-bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+  margin-top: 33px;
+  font-size: 32px;
+  font-family: Rubik;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 30px;
+  letter-spacing: -0.286px;
+}
+
+form {
+  position: relative;
+  width: 555px;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0px 50px 50px -25px rgba(0, 0, 0, 0.1);
+}
+
+#text {
+  width: 555px;
+  height: 58px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 18px 232px 19px 24px;
+  color: #2c2c2c;
+  font-size: 18px;
+  font-family: Rubik;
+  outline: none;
+}
+
+#submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 58px;
+  height: 58px;
+  box-sizing: border-box;
+  background-color: #000;
+  border: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  cursor: pointer;
+  background-image: url("./images/icon-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.informations {
+  max-width: 1110px;
+  height: 161px;
+  background-color: #fff;
+  margin: 48px auto;
+}
+
+.informations div{
+    display: inline-block;
+}
+
+#map {
+  height: 180px;
+}
