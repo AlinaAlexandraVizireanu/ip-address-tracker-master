@@ -24,16 +24,17 @@
   </form>
 
   <div class="container">
-    <div class="ip"><p class="title">IP Address</p><p class="info">192.212.174.101</p></div>
+    <div class="ip"><p class="title">IP Address</p><p id="ip-info" class="info">192.212.174.101</p></div>
     <div class="line"></div>
-    <div class="location"><p class="title">Location</p><p class="info">Brooklyn, NY 10001</p></div>
+    <div class="location"><p class="title">Location</p><p id="location-info" class="info">Brooklyn, NY 10001</p></div>
     <div class="line"></div>
-    <div class="timezone"><p class="title">Timezone</p> <p class="info">UTC-05:00 <!-- add offset value dynamically using the API --></p></div>
+    <div class="timezone"><p class="title">Timezone</p> <p id="timezone-info" class="info">UTC-05:00</p></div>
     <div class="line"></div>
-    <div class="isp"><p class="title">ISP</p><p class="info">SpaceX Starlink</p></div>
+    <div class="isp"><p class="title">ISP</p><p id="isp-info" class="info">SpaceX Starlink</p></div>
   </div>
   
   <div id="map"></div>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
