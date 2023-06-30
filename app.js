@@ -4,7 +4,7 @@ const ipInfo = document.querySelector("#ip-info");
 const locationInfo = document.querySelector("#location-info");
 const timezoneInfo = document.querySelector("#timezone-info");
 const ispInfo = document.querySelector("#isp-info");
-let marker;
+let marker = null;
 
 // ----------Configuration of the map----------
 
@@ -12,8 +12,9 @@ var map = L.map("map").setView([51.505, -0.09], 13);
 
 var locationIcon = L.icon({
   iconUrl: "images/icon-location.svg",
-  iconAnchor: [22, 94],
-  popupAnchor: [1, -90],
+  iconSize: [46, 56],
+  iconAnchor: [12, 56],
+  popupAnchor: [12, -55],
 });
 
 L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -30,6 +31,9 @@ marker = L.marker([51.505, -0.09], { icon: locationIcon })
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
+  if(textInput.innerText === ""){
+    alert("Please introduce an IP address or a domain")
+  }
   let regexp = /^(?:[0-9]{1,3}\.){3}[0-9]{1,3}$/g;
 
   axios
@@ -62,7 +66,7 @@ form.addEventListener("submit", function (e) {
         .bindPopup("Location of the requested IP Address or domain")
         .openPopup();
 
-        map.setView([lat, lng], 13);
+      map.setView([lat, lng], 13);
     })
     .catch((err) => {
       alert("Please introduce a valid IP address or domain");
