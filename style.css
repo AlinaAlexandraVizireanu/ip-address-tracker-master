@@ -4,9 +4,18 @@ body {
   height: 100vh;
   margin: 0;
   font-family: "Rubik", sans-serif;
-  background-image: url("images/pattern-bg-desktop.png");
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  background: url("images/pattern-bg-desktop.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: fixed;
+  background-size: cover;
+  width: 100vw;
+  height: 280px;
 }
 
 h1 {
@@ -69,7 +78,9 @@ form {
   left: 50%;
   transform: translate(-50%);
   z-index: 1000;
-  width: 1110px;
+  width: 100vw;
+  max-width: 1110px;
+  min-width: 953px;
   height: 161px;
   background-color: #fff;
   margin: 48px auto;
@@ -123,7 +134,9 @@ p.title {
 
 #map {
   position: absolute;
-  top: 37%;
+  bottom: 0;
   width: 100vw;
-  height: 70vh;
+  /* In this calc function I've substracted the height of the background image
+   from the height of the screen that is viewed*/
+  height: calc(100vh - 280px);
 }
