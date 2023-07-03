@@ -23,6 +23,7 @@ h1 {
   color: #fff;
   text-align: center;
   margin-top: 33px;
+  margin-bottom: 31px;
   font-size: 32px;
   font-family: Rubik;
   font-style: normal;
@@ -139,4 +140,86 @@ p.title {
   /* In this calc function I've substracted the height of the background image
    from the height of the screen that is viewed*/
   height: calc(100vh - 280px);
+}
+
+@media (max-width: 952px) {
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background: url("images/pattern-bg-mobile.png");
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    width: 100vw;
+    height: 300px;
+  }
+
+  h1 {
+    margin-top: 26px;
+    margin-bottom: 29px;
+    font-size: 26px;
+    letter-spacing: -0.232px;
+  }
+
+  form {
+    width: 327px;
+    height: 58px;
+  }
+
+  #text {
+    width: 327px;
+    height: 58px;
+    padding: 18px 65px 19px 24px;
+    font-size: 14px;
+  }
+
+  .container {
+    flex-direction: column;
+    max-width: 327px;
+    min-width: 320px;
+    height: 294px;
+    margin: 24px auto;
+  }
+
+  .ip,
+  .location,
+  .timezone,
+  .isp {
+    text-align: center;
+    width: 279px;
+    margin-top: 24px;
+  }
+
+  .ip {
+    margin-top: 26px;
+  }
+
+  .isp p.info {
+    padding-right: 0;
+  }
+
+  .line {
+    display: none;
+  }
+
+  p.title {
+    color: #2c2c2c;
+    font-size: 10px;
+    letter-spacing: 1.458px;
+    margin-bottom: 7px;
+  }
+
+  .info {
+    color: #2c2c2c;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.179px;
+  }
+
+  #map {
+    /* In this calc function I've substracted the height of the background image
+     from the height of the screen that is viewed*/
+    height: calc(100vh - 300px);
+  }
 }
