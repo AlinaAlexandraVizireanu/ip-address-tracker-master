@@ -73,6 +73,10 @@ form {
   background-position: center;
 }
 
+#submit:hover{
+    background-color: #3F3F3F;
+}
+
 .container {
   display: flex;
   position: absolute;
