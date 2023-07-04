@@ -98,10 +98,6 @@ form {
   padding: 0 32px 0 32px;
 }
 
-.isp p.info {
-  padding-right: 50%;
-}
-
 .line {
   align-self: center;
   width: 1px;
@@ -193,10 +189,6 @@ p.title {
 
   .ip {
     margin-top: 26px;
-  }
-
-  .isp p.info {
-    padding-right: 0;
   }
 
   .line {
