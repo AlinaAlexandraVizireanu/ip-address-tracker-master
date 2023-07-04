@@ -4,7 +4,6 @@ const ipInfo = document.querySelector("#ip-info");
 const locationInfo = document.querySelector("#location-info");
 const timezoneInfo = document.querySelector("#timezone-info");
 const ispInfo = document.querySelector("#isp-info");
-const storedData = localStorage.getItem("myData");
 
 const map = L.map("map").setView([0, 0], 13);
 const locationIcon = L.icon({
@@ -21,8 +20,6 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 
 
 /// -------Fetching on first load---------
-
-if (!storedData) {
   axios
     .get("https://api.ipify.org?format=json")
     .then((response) => {
@@ -53,10 +50,9 @@ if (!storedData) {
 
       map.setView([lat, lng], 13);
     })
-    .catch((error) => {
+    .catch((err) => {
       alert("Something went wrong");
     });
-}
 /// -------Fetching on first load---------
 
 form.addEventListener("submit", function (e) {
