@@ -55,7 +55,7 @@ To get the IP Address locations I've used the [IP Geolocation API by IPify](http
 - JavaScript
 - Mobile-first workflow
 - [IP Geolocation API by IPify](https://geo.ipify.org/) - For IP Address and domain
-- [[LeafletJS](https://leafletjs.com/) - For the map
+- [LeafletJS](https://leafletjs.com/) - For the map
 
 ### What I learned
 
