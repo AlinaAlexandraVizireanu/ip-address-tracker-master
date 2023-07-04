@@ -73,8 +73,8 @@ form {
   background-position: center;
 }
 
-#submit:hover{
-    background-color: #3F3F3F;
+#submit:hover {
+  background-color: #3f3f3f;
 }
 
 .container {
@@ -140,6 +140,15 @@ p.title {
   /* In this calc function I've substracted the height of the background image
    from the height of the screen that is viewed*/
   height: calc(100vh - 280px);
+}
+
+.leaflet-top .leaflet-control {
+  margin-top: 200px;
+  font-weight: 200;
+}
+
+.leaflet-left .leaflet-control {
+  margin-left: 0px;
 }
 
 @media (max-width: 952px) {
