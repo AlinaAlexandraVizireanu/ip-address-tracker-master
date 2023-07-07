@@ -22,9 +22,9 @@ h1 {
   position: relative;
   color: #fff;
   text-align: center;
-  margin-top: 33px;
-  margin-bottom: 31px;
-  font-size: 32px;
+  margin-top: 1.031em;
+  margin-bottom: .969em;
+  font-size: 2rem;
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
@@ -47,9 +47,9 @@ form {
   border: none;
   border-radius: 15px;
   cursor: pointer;
-  padding: 18px 232px 19px 24px;
+  padding: 1em 12em 1.063em 1.375em;
   color: #2c2c2c;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: Rubik;
   outline: none;
 }
@@ -98,8 +98,8 @@ form {
 .timezone,
 .isp {
   width: 277px;
-  margin-top: 32px;
-  padding: 0 32px 0 32px;
+  margin-top: 2em;
+  padding: 0 2em 0 2em;
 }
 
 .line {
@@ -112,19 +112,19 @@ form {
 
 p.title {
   color: #2c2c2c;
-  font-size: 12px;
+  font-size: .75rem;
   font-family: Rubik;
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
   opacity: 0.4986979067325592;
-  margin-bottom: 13px;
+  margin-bottom: 1.063em;
   margin-top: 0;
 }
 
 .info {
   color: #2c2c2c;
-  font-size: 26px;
+  font-size: 1.625rem;
   font-family: Rubik;
   font-style: normal;
   font-weight: 500;
@@ -143,12 +143,12 @@ p.title {
 }
 
 .leaflet-top .leaflet-control {
-  margin-top: 200px;
+  margin-top: 16.7em;
   font-weight: 200;
 }
 
 .leaflet-left .leaflet-control {
-  margin-left: 0px;
+  margin-left: 0;
 }
 
 @media (max-width: 952px) {
@@ -165,9 +165,9 @@ p.title {
   }
 
   h1 {
-    margin-top: 26px;
-    margin-bottom: 29px;
-    font-size: 26px;
+    margin-top: 1em;
+    margin-bottom: 1.115em;
+    font-size: 1.625rem;
     letter-spacing: -0.232px;
   }
 
@@ -179,8 +179,8 @@ p.title {
   #text {
     width: 327px;
     height: 58px;
-    padding: 18px 65px 19px 24px;
-    font-size: 14px;
+    padding: 1.29em 4.188em 1.357em 1.714em;
+    font-size: .875rem;
   }
 
   .container {
@@ -188,7 +188,7 @@ p.title {
     max-width: 327px;
     min-width: 320px;
     height: 294px;
-    margin: 24px auto;
+    margin: 1.5em auto;
   }
 
   .ip,
@@ -197,11 +197,11 @@ p.title {
   .isp {
     text-align: center;
     width: 279px;
-    margin-top: 24px;
+    margin-top: 1.5em;
   }
 
   .ip {
-    margin-top: 26px;
+    margin-top: 1.625em;
   }
 
   .line {
@@ -210,14 +210,14 @@ p.title {
 
   p.title {
     color: #2c2c2c;
-    font-size: 10px;
+    font-size: .625rem;
     letter-spacing: 1.458px;
-    margin-bottom: 7px;
+    margin-bottom: .7008em;
   }
 
   .info {
     color: #2c2c2c;
-    font-size: 20px;
+    font-size: 1.25rem;
     line-height: 24px;
     letter-spacing: -0.179px;
   }
