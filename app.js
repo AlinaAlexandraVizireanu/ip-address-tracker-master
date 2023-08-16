@@ -19,21 +19,23 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
 }).addTo(map);
 
 /// -------Fetching on first load---------
-axios
-  .get("http://ip-api.com/json/")
-  .then((response) => {
-    return Promise.resolve(response.data.query);
-  })
-  .then((response) => {
-    return axios.get(`http://ip-api.com/json/${response}`);
-  })
-  .then((response) => {
-    let ip = response.data.query;
-    let location = `${response.data.city}, ${response.data.country} ${response.data.zip}`;
-    let timezone = `UTC ${response.data.timezone}`;
-    let isp = response.data.isp;
-    let lat = response.data.lat;
-    let lng = response.data.lon;
+  axios
+    .get("https://api.ipify.org?format=json")
+    .then((response) => {
+      return Promise.resolve(response.data.ip);
+    })
+    .then((response) => {
+      return axios.get(
+        `https://geo.ipify.org/api/v2/country,city?apiKey=at_Bjs4u90FWYHpIRTJRXDLoTgJaI1lg&ipAddress=${response}`
+      );
+    })
+    .then((response) => {
+      let ip = response.data.ip;
+      let location = `${response.data.location.city}, ${response.data.location.country} ${response.data.location.postalCode}`;
+      let timezone = `UTC${response.data.location.timezone}`;
+      let isp = response.data.isp;
+      let lat = response.data.location.lat;
+      let lng = response.data.location.lng;
 
     ipInfo.innerText = ip;
     locationInfo.innerText = location;
@@ -62,8 +64,10 @@ form.addEventListener("submit", function (e) {
 
     axios
       .get(
-        `http://ip-api.com/json/${
-          regexp.test(textInput.value) ? textInput.value : textInput.value
+        `https://geo.ipify.org/api/v2/country,city?apiKey=at_Bjs4u90FWYHpIRTJRXDLoTgJaI1lg&${
+          regexp.test(textInput.value)
+            ? "ipAddress=" + textInput.value
+            : "domain=" + textInput.value
         }`
       )
       .then((response) => {
