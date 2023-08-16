@@ -96,10 +96,6 @@ form.addEventListener("submit", function (e) {
       })
       .catch((err) => {
         alert("Please introduce a valid IP address or domain");
-        ipInfo.innerText = "";
-        locationInfo.innerText = "";
-        timezoneInfo.innerText = "";
-        ispInfo.innerText = "";
       });
   }
 });
