@@ -27,7 +27,7 @@ L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
     })
     .then((response) => {
       return axios.get(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_mExeSqk8jHaRZjAEgponMhR3QlYDH&ipAddress=${response}`
+        `https://geo.ipify.org/api/v2/country,city?apiKey=at_Bjs4u90FWYHpIRTJRXDLoTgJaI1lg&ipAddress=${response}`
       );
     })
     .then((response) => {
@@ -64,7 +64,7 @@ form.addEventListener("submit", function (e) {
 
     axios
       .get(
-        `https://geo.ipify.org/api/v2/country,city?apiKey=at_mExeSqk8jHaRZjAEgponMhR3QlYDH&${
+        `https://geo.ipify.org/api/v2/country,city?apiKey=at_Bjs4u90FWYHpIRTJRXDLoTgJaI1lg&${
           regexp.test(textInput.value)
             ? "ipAddress=" + textInput.value
             : "domain=" + textInput.value
